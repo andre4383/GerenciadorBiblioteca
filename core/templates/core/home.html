@@ -1,0 +1,11 @@
+{% extends 'core/base.html' %} {% block content %}
+<h1>Bem-vindo à Biblioteca</h1>
+<p>Sistema de Gerenciamento de Biblioteca</p>
+
+<div>
+  <h2>Menu:</h2>
+  <ul>
+    <li><a href="{% url 'core:lista_livros' %}">Ver Livros</a></li>
+  </ul>
+</div>
+{% endblock %}

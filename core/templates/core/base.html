@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Biblioteca</title>
+    <style>
+      nav {
+        background-color: #f8f9fa;
+        padding: 10px;
+        margin-bottom: 20px;
+      }
+      nav a {
+        margin-right: 15px;
+        text-decoration: none;
+        color: #007bff;
+      }
+      main {
+        padding: 20px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+      }
+      th {
+        background-color: #f8f9fa;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="{% url 'core:home' %}">Início</a>
+      <a href="{% url 'core:lista_livros' %}">Livros</a>
+      <a href="{% url 'core:cadastrar_livro' %}">Cadastrar Livro</a>
+    </nav>
+
+    <main>{% block content %} {% endblock %}</main>
+  </body>
+</html>
